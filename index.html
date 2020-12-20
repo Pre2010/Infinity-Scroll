@@ -4,19 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- FavIcon from preyesh-patel.com -->
-    <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=preyesh-patel.com">
-    <!-- Font awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=preyesh-patel.com">   
     <!-- CSS -->
     <link rel="stylesheet" href="./style.css">
-    <title>Template</title>
+    <title>Infinity Scroll</title>
 </head>
 <body>
-    <!-- Icon -->
-    <i class="fab fa-android"></i>
+    <!-- Particles -->
+    <div  id="particles-js"></div>
+    <div>
+        
+        <!-- Title -->
+        <h1>Infinity Scroll</h1>
+
+        <!-- Loader -->
+        <div class="loader" id="loader">
+            <img src="assets/Infinity_Loader.svg" alt="Loading">
+        </div>
+
+        <!-- Image Container -->
+        <div class="image-container" id="image-container">
+        </div>
+    </div>
+
     <!-- Script -->
     <script src="./script.js">
         
     </script>
+    <!-- Import Particles.js and app.js files -->
+    <script src= 
+    "particles.js-master/particles.js"> 
+    </script> 
+    <script src= 
+        "/particles.js-master/demo/js/app.js"> 
+    </script> 
 </body>
 </html>
