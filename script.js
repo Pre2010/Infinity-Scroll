@@ -5,13 +5,19 @@ let photosArray = [];
 let imagesLoadedNum = 0;
 let loaded = false;
 let totalImagesNum = 0;
+// default state of the initial image load on page load
+let initialImageLoad = true;
 
 // Unsplash API
 const queryString = 'galaxy';
-const count = 30;
-//  TODO remove this before committing.
+let initialImageLoadCount = 5;
+
 const apiKey = 'dwSgWNqTX_Ssk_C7NausSukTu85lVv0PdAhIJR_l_84';
-const apiUrl =`https://api.unsplash.com/photos/random?client_id=${apiKey}&count=${count}&query=${queryString}`;
+let apiUrl =`https://api.unsplash.com/photos/random?client_id=${apiKey}&count=${initialImageLoadCount}&query=${queryString}`;
+
+function updateApiUrlWithNewCount(imageLoadCount) {
+    apiUrl =`https://api.unsplash.com/photos/random?client_id=${apiKey}&count=${imageLoadCount}&query=${queryString}`;
+}
 
 // helper function to set attributes on DOM elements
 function setAttributes(element, attributes) {
@@ -64,7 +70,13 @@ async function getImages() {
     try {
         const response = await fetch(apiUrl);
         photosArray = await response.json();
+        
         displayImages();
+
+        if (initialImageLoad) {
+            updateApiUrlWithNewCount(30);
+            initialImageLoad = false;
+        }
     } catch (error) {
         console.log(error);
     }
