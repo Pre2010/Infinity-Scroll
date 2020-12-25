@@ -12,7 +12,7 @@ let initialImageLoad = true;
 const queryString = 'galaxy';
 let initialImageLoadCount = 5;
 
-const apiKey = 'dwSgWNqTX_Ssk_C7NausSukTu85lVv0PdAhIJR_l_84';
+const apiKey = 'o7VPU0UfI1fa4eVHvw1NgLGbAmUvMZ_jXB9mUScU92w';
 let apiUrl =`https://api.unsplash.com/photos/random?client_id=${apiKey}&count=${initialImageLoadCount}&query=${queryString}`;
 
 function updateApiUrlWithNewCount(imageLoadCount) {
